@@ -1,0 +1,99 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "call_to_actions",
+  "thread_state" : "existing_thread",
+  "call_to_actions":[
+    {
+      "type":"postback",
+      "title":"Search Events“,
+      "payload":"Search Events"
+    },
+    {
+      "type":"postback",
+      "title":"Bookmarked Events",
+      "payload":"Bookmarked Events"
+    },
+    {
+      "type":"postback",
+      "title":"Settings",
+      "payload":"Settings"
+    },
+    {
+      "type":"postback",
+      "title":"Settings",
+      "payload":"Settings"
+    },
+    {
+      "type":"postback",
+      "title":"Help",
+      "payload":"Help"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=XXXXXXXX"
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "call_to_actions",
+  "thread_state" : "existing_thread",
+  "call_to_actions":[
+    {
+      "type":"postback",
+      "title":"Search Events",
+      "payload":"SEARCH_EVENTS"
+    },
+    {
+      "type":"postback",
+      "title":"Bookmarked Events",
+      "payload":"BOOKMARKED_EVENTS"
+    },
+    {
+      "type":"postback",
+      "title":"Settings",
+      "payload":"SETTINGS"
+    },
+    {
+      "type":"postback",
+      "title":"Help",
+      "payload":"HELP"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=XXXXXXXX"
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "call_to_actions",
+  "thread_state" : "existing_thread",
+  "call_to_actions":[
+    {
+      "type":"postback",
+      "title":"Search Events",
+      "payload": 
+      {
+        "action": "SEARCH_EVENTS"
+      }
+    },
+    {
+      "type":"postback",
+      "title":"Bookmarked Events",
+      "payload": 
+      {
+        "action": "BOOKMARKED_EVENTS"
+      }
+    },
+    {
+      "type":"postback",
+      "title":"Settings",
+      "payload": 
+      {
+        "action": "SETTINGS"
+      }
+    },
+    {
+      "type":"postback",
+      "title":"Help",
+      "payload": 
+      {
+        "action": "HELP"
+      }
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=XXXXXXXX" 
+
